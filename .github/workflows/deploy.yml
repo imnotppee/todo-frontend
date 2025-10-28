@@ -43,7 +43,7 @@ jobs:
       
       - name: Build Next.js app
         env:
-        NEXT_PUBLIC_API_URL: https://flask-todo-app-gy49.onrender.com/api
+          NEXT_PUBLIC_API_URL: https://flask-todo-app-gy49.onrender.com/api
         run: npm run build
       
       - name: Upload artifact
