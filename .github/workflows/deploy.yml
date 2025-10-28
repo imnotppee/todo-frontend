@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
 
       - name: Clear cache
         run: |
@@ -45,7 +45,6 @@ jobs:
         run: |
           echo "✅ API_URL = $NEXT_PUBLIC_API_URL"
           npm run build
-          npx next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
