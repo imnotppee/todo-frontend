@@ -44,8 +44,12 @@ jobs:
       - name: Build Next.js app
         env:
           NEXT_PUBLIC_API_URL: https://flask-todo-app-gy49.onrender.com/api
-        run: npm run build
-      
+          run: |
+           echo "✅ API_URL = $NEXT_PUBLIC_API_URL"
+           npm run build
+           npx next export
+
+         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
